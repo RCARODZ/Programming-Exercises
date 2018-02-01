@@ -17,13 +17,46 @@ z stores the address of m  = 0x7ffd40630d44
 &z stores the address of z = 0x7ffd40630d50 
 */
 
+void swap(int x, int y);
+void swap1(int *, int *);
+
 int main(){
     // Understanding pointers
-    int m = 10;
-    int *z;     //the pointer
-    int n;
-    int o;
+    int x = 1;
+    int y = 2, z[10];
+    int *ip;    // ip is a pointer that points to int
 
-    printf("m=%d : *z=%d : z=%x : &z=%x : n=%d : o=%d\n",m,*z,z,&z,n,o);
+    ip = &x;    // ip now points to x
+    y = *ip;    //y is now 1
+    *ip = 0;    //x is now 0
+    ip = &z[0]; //ip now points to z[0]
 
+    int a = 5;
+    int b = 10;
+
+    printf("Swap: a:%d b:%d\n", a, b);
+    swap(a, b);
+    printf("Swap: a:%d b:%d\n", a, b);
+    printf("Swap1: a:%d b:%d\n", a, b);
+    swap1(&a, &b);
+    printf("Swap1: a:%d b:%d\n", a, b);
+
+    return 0;
+
+}
+
+void swap(int x, int y){
+    int temp;
+
+    temp = x;
+    x = y;
+    y = temp;
+}
+
+void swap1(int *x, int *y){
+    int temp;
+
+    temp = *x;
+    *x = *y;
+    *y = temp;
 }

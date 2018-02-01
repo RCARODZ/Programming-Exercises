@@ -21,3 +21,5 @@ Exercise1.c
                                                                                                               
  &z stores the address of z = 0x7ffd40630d50 
 ```
+
+## Notes
