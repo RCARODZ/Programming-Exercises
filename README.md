@@ -23,3 +23,10 @@ Exercise1.c
 ```
 
 ## Notes
+
+Why pointers in C functions? 
+
+Since C passes arguments to functions by value, there is no direct way for the called function to alter a variable in the calling function.
+
+## Refferences:
+The C Programming Language 
